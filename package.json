@@ -1,0 +1,40 @@
+{
+  "name": "telebirr",
+  "version": "0.0.1",
+  "description": "Telebirr Node js payment  utility ",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup index.ts --format cjs,esm --dts",
+    "lint": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dawit-michael/telebirr.git"
+  },
+  "keywords": [
+    "telebirr",
+    "api",
+    "Ethiopia",
+    "payment"
+  ],
+  "author": "Dawit Michael",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dawit-michael/telebirr/issues"
+  },
+  "homepage": "https://github.com/dawit-michael/telebirr#readme",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "node-rsa": "^1.1.1",
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.0",
+    "@types/node": "^16.10.3",
+    "@types/node-rsa": "^1.1.1",
+    "tsup": "^6.6.3"
+  }
+}
