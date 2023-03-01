@@ -7,13 +7,17 @@ on:
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  build:
+  release:
+    name: 🚀 release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: 📚 checkout
+        uses: actions/checkout@v3
+      - name: 🟢 node
+        uses: actions/setup-node@v3
         with:
           node-version: 16.x
+          registry-url: https://registry.npmjs.org
           cache: "npm"
 
       - run: npm install --frozen-lockfile
@@ -22,5 +26,6 @@ jobs:
         uses: changesets/action@v1
         with:
           publish: npm run build
+          run: npm publish --access public
         env:
-          GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
