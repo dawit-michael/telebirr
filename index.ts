@@ -1,6 +1,6 @@
 import axios from "axios";
 import { TBSecurity } from "./security";
-import { ITelebirrRequest, ITelebirrResponse } from "./types";
+import { ITelebirrPaymentResult, ITelebirrRequest, ITelebirrResponse } from "./types";
 
 export class Telebirr {
   private request: ITelebirrRequest;
@@ -45,4 +45,10 @@ export class Telebirr {
     return result;
   }
 
+  decryptResult(dataToDecrypt: string ):ITelebirrPaymentResult {
+    return TBSecurity.decryptPublic({
+      dataToDecrypt: dataToDecrypt,
+      publicKey: this.publicKey,
+    });
+  }
 }

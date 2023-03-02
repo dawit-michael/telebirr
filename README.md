@@ -56,9 +56,8 @@ Simple & easy :
 ## Extra  
 1. **Decoding telebirr success callback notification**
 ```
-  let decodingResult = await TBSecurity.decryptPublic({
-    dataToDecrypt: <DATA-TO-BE-DECRYPTED>,
-    publicKey:"<YOUR-PUBLIC-KEY>",
+  let decodingResult =  telebirr.decryptPublic({
+    dataToDecrypt: <DATA-TO-BE-DECRYPTED>
   });
 ```
 
