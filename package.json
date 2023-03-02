@@ -1,5 +1,5 @@
 {
-  "name": "@telebirr/core",
+  "name": "@telebirrh5/core",
   "version": "0.0.1",
   "description": "Telebirr Node js payment  utility ",
   "main": "dist/index.js",

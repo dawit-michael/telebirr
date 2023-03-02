@@ -18,7 +18,7 @@ This npm package  is an encapsulation of telebirr  api created to ease the devel
 Installing Telebirr
 Install the dependencies and devDependencies and start the server.
 ```
-npm install telebirr
+npm i @telebirrh5/core
 ```
 ## Usage -- (keeping it simple 👌) 
 
@@ -56,17 +56,12 @@ Simple & easy :
 ## Extra  
 1. **Decoding telebirr success callback notification**
 ```
-  let paymentResult = await TBSecurity.decryptPublic({
+  let decodingResult = await TBSecurity.decryptPublic({
     dataToDecrypt: <DATA-TO-BE-DECRYPTED>,
     publicKey:"<YOUR-PUBLIC-KEY>",
   });
 ```
 
-
-## Plugins
-
-Dillinger is currently extended with the following plugins.
-Instructions on how to use them in your own application are linked below.
 
 
 
