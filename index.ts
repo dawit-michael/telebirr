@@ -6,7 +6,6 @@ export class Telebirr {
   private request: ITelebirrRequest;
   private publicKey: string;
   private paymentUrl: string;
-
   constructor(arg: {
     request: ITelebirrRequest;
     publicKey: string;
@@ -45,10 +44,10 @@ export class Telebirr {
     return result;
   }
 
-  decryptResult(dataToDecrypt: string ):ITelebirrPaymentResult {
+  public static decryptResult(param: { dataToDecrypt: string; publicKey: string }):ITelebirrPaymentResult {
     return TBSecurity.decryptPublic({
-      dataToDecrypt: dataToDecrypt,
-      publicKey: this.publicKey,
+      dataToDecrypt: param.dataToDecrypt,
+      publicKey: param.publicKey,
     });
   }
 }

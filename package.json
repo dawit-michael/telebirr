@@ -1,7 +1,7 @@
 {
   "name": "@telebirrh5/core",
-  "version": "0.1.0",
-  "description": "Telebirr Node js payment  utility ",
+  "version": "0.1.2",
+  "description": "Telebirr H5 Web payment integration helper",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",

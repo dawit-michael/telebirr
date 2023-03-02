@@ -5,8 +5,8 @@
 
 Telebirr is a mobile money service developed and was launched by Ethio telecom, the state owned telecommunication and Internet service provider in Ethiopia.
 > Notice
-> This is a personal package  created to help developers and not sponsered or created by the offical telebirr company.
-> Any information regarding your payment credentials such as appId,appKey and publicKey are in no way stored or changed when using this package package.
+> This is a personal package  created to help developers and not sponsored or created by the official telebirr company.
+> Any information regarding your payment credentials such as appId,appKey and publicKey are in no way stored or changed .
 
 This npm package  is an encapsulation of telebirr  api created to ease the development process.
 
@@ -56,8 +56,9 @@ Simple & easy :
 ## Extra  
 1. **Decoding telebirr success callback notification**
 ```
-  let decodingResult =  telebirr.decryptPublic({
-    dataToDecrypt: <DATA-TO-BE-DECRYPTED>
+  let decodingResult =  Telebirr.decryptResult({
+    dataToDecrypt: <DATA-TO-BE-DECRYPTED>,
+    publicKey:"<YOUR-PUBLIC-KEY>",
   });
 ```
 

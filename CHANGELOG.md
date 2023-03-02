@@ -5,6 +5,7 @@
 ### Minor Changes
 
 - ab760ec: Updated readme
+## 0.1.0
 
 ### Patch Changes
 
